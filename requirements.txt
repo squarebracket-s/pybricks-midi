@@ -1,0 +1,4 @@
+bleak==3.0.2
+dbus-fast==5.2.0
+mido==1.3.3
+packaging==26.3
