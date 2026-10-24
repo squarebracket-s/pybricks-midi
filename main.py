@@ -175,8 +175,11 @@ async def main():
 
 
 if __name__ == "__main__":
-    if cmd_args.quiet:
-        with suppress(asyncio.CancelledError):
+    try:
+        if cmd_args.quiet:
+            with suppress(asyncio.CancelledError):
+                asyncio.run(main())
+        else:
             asyncio.run(main())
-    else:
-        asyncio.run(main())
+    except KeyboardInterrupt:
+        pass
